@@ -1,0 +1,47 @@
+/*-----welcome-note -----*/
+.welcome-note{
+	background:#f0f2f1;
+	z-index: 1;
+}
+.welcome-note-left h2{
+	color: #264F9E;
+	text-transform: uppercase;
+	font-size: 3em;
+	padding-top:30px;
+}
+.welcome-note-left span{
+	color:#2f3837;
+	text-transform:uppercase;
+	font-size:1.8em;
+}
+
+.welcome-note-right-left h3{
+	font-size:0.9em;
+	color:#2f3837;
+	line-height:1.5em;
+	text-transform:uppercase;
+	margin:0;
+	padding:0 0 0.5em 0;
+}
+.welcome-note-right-left p{
+	color: #777;
+	font-size: 0.875em;
+	line-height: 1.8em;
+}
+.welcome-note-right-right a{
+	background: #264F9E;
+	color: #FFF;
+	font-weight: 300;
+	padding: 0.9em 2em;
+	display: inline-block;
+	text-decoration: none;
+	margin-top: 1em;
+	font-size: 1.3em;
+	font-weight: 600;
+}
+.welcome-note-right-right a:hover{
+	background:#2f3837;
+}
+.welcome-note-right{
+	padding:2em 0;
+}
