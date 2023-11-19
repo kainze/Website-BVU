@@ -245,12 +245,25 @@ async function getImgListJSON() {
 }
 
 
+function setBackgroundimage() {
+    // set background image on body
+    const images = [
+        "./../../img/TraegerVerein.jpg",
+        "./../../img/background.jpg",
+        // Add more image URLs here
+    ];
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImage = images[randomIndex];
+
+    document.body.style.backgroundImage = `url('${randomImage}')`;
+}
 
 
 // init ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function init() {
 
     changeCountdown();
+    setBackgroundimage();
 
 
     var cookie = document.cookie;
