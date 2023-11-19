@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "build:ts": "tsc",
-    "build:scss": "sass ./custom_scss/custom.scss:dest/css/custom_bootstrap.css",
+    "build:scss": "sass ./custom_scss/custom.scss:./dest/css/custom_bootstrap.css",
     "watch:ts": "tsc -watch",
     "watch:scss": "sass --watch custom_scss/custom.scss:dest/css/custom_bootstrap.css",
     "build": "npm run build:ts && npm run build:scss",
