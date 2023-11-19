@@ -1,13 +1,3 @@
-//Pics Modal
-let picsCarouselInner = document.getElementById('picsCarouselInner');
-let carouselIndicatorsBilder = document.getElementById('carouselIndicatorsBilder');
-
-// ZugaufstellungModal
-let zugaufstellungModal = document.getElementById('zugaufstellungModal');
-let closeZugaufstellungModal1 = document.getElementById('closeZugaufstellungModal1');
-let closeZugaufstellungModal2 = document.getElementById('closeZugaufstellungModal2');
-let btnclose = document.getElementById('btnclose');
-
 // Countdown ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 let countDown_days = document.getElementById("days");
 let countDown_hours = document.getElementById("hours");
@@ -15,15 +5,19 @@ let countDown_minutes = document.getElementById("minutes");
 let countDown_seconds = document.getElementById("seconds");
 let CountdownDescription = document.getElementById("CountdownDescription");
 let CountdownDates = [
-    { date: new Date("Jul 10, 2024 08:00:00").getTime(), description: "bis zu den Festwochen"},
-    { date: new Date("Sep 09, 2024 19:00:00").getTime(), description: "zum Schafkopfturnier"},
-    { date: new Date("Sep 08, 2024 20:00:00").getTime(), description: "zur Verkupplungsparty"},
-    { date: new Date("Sep 07, 2024 18:30:00").getTime(), description: "zu Auf A Wort"},
-    { date: new Date("Sep 06, 2024 19:00:00").getTime(), description: "zum Bieranstich"},
-    { date: new Date("Sep 06, 2024 19:00:00").getTime(), description: "zum Fest"}
+    { date: new Date("Aug 04, 2024 19:00:00").getTime(), description: "zum Festsonntag"},
+    { date: new Date("Aug 03, 2024 19:00:00").getTime(), description: "zum Festabend"},
+    { date: new Date("Aug 02, 2024 19:00:00").getTime(), description: "zur Almrauschparty"},
+    { date: new Date("Aug 01, 2024 19:00:00").getTime(), description: "zur BVU Brass Night"},
+    { date: new Date("Jul 30, 2024 19:00:00").getTime(), description: "zum Kabarett"},
+    { date: new Date("Jul 28, 2024 19:00:00").getTime(), description: "zum Rasenmäherbulldogrennen"},
+    { date: new Date("Jul 27, 2024 19:00:00").getTime(), description: "zur Burschenparty"},
+    { date: new Date("Jul 26, 2024 19:00:00").getTime(), description: "zum Wein- und Weißbierfest"},
+    { date: new Date("Jul 25, 2024 19:00:00").getTime(), description: "zum Bieranstich"},
+    { date: new Date("Jul 25, 2024 19:00:00").getTime(), description: "zum Fest"},
 ];
 
-var countDown_Date = new Date("Sep 05, 2023 18:00:00").getTime();
+var countDown_Date = new Date("Sep 06, 2024 18:00:00").getTime();
 
 function setCountdown() {
     
@@ -56,7 +50,6 @@ function setCountdown() {
 }
 
 function changeCountdown() {
-    
 
     CountdownDates.forEach(element => {
         if(CountdownDescription == null) {
@@ -79,183 +72,14 @@ setInterval(function() {
     }
 }, 1000);
 
-
-// Modal direktlink ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-function openModal() {
-    // show modal if url has #zugaufstellung in it
-    if(window.location.hash == "#zugaufstellung" && zugaufstellungModal != null) {
-        zugaufstellungModal.style.display = "block";
-        zugaufstellungModal.style.paddingRight = "17px";
-        zugaufstellungModal.className="modal fade show";
-    }
-
-    if (closeZugaufstellungModal1 != null) {
-        closeZugaufstellungModal1.addEventListener('click', (e) => {
-            if(zugaufstellungModal != null) {
-                zugaufstellungModal.style.display = "none";
-                zugaufstellungModal.className="modal fade";
-        }
-        });
-    }
-    if (closeZugaufstellungModal2 != null) {
-        closeZugaufstellungModal2.addEventListener('click', (e) => {
-            if(zugaufstellungModal != null) {
-                zugaufstellungModal.style.display = "none";
-                zugaufstellungModal.className="modal fade";
-        }
-        });
-    }
-}
-
-// load Pics ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-async function openBilder(choosenFilter: string) {
-
-    // show loading screen d-none
-    let loadingScreen = document.getElementById("loadingScreen");
-    let imagesScreen = document.getElementById("imagesScreen");
-    if(loadingScreen != null) {
-        loadingScreen.classList.remove("d-none");
-    }
-    if(imagesScreen != null) {
-        imagesScreen.classList.add("d-none");
-    }
-    
-
-    await document.querySelectorAll(".filterButton").forEach(el => {
-        el.classList.remove("active");
-    });
-
-    let choosenFilterElement = document.getElementById(choosenFilter);
-    if(choosenFilterElement != null) {
-        choosenFilterElement.classList.add("active");
-    }
-
-    // remove all old pics
-    await document.querySelectorAll(".carouselPic").forEach(el => {
-        el.remove();
-    });
-
-    await document.querySelectorAll(".carouselPicIndicator").forEach(el => {
-        el.remove();
-    });
-
-    // set first carousel item and Indicator active
-    let firstCarouselItem = document.getElementById("firstCarouselItem");
-    if(firstCarouselItem != null) {
-        firstCarouselItem.classList.add("active");
-    }
-    let firstCarouselIndicator = document.getElementById("firstCarouselIndicator");
-    if (firstCarouselIndicator != null) {
-        firstCarouselIndicator.classList.add("active");
-    }
-
-
-    // choose which pics to load
-    if (choosenFilter == "bestof") {
-        await loadAllPics(true);
-    }
-    else if (choosenFilter == "alleBilder") {
-        await loadAllPics(false);
-    }
-    else if (choosenFilter == "imVorfeld" || choosenFilter == "bierzeltkabarett" || choosenFilter == "aufaWort" || choosenFilter == "verkupplungsparty" || choosenFilter == "schafkopfturnier" || choosenFilter == "festsonntag") {
-        await loadPicsFromFolder(choosenFilter);
-    }
-    else {
-        await loadAllPics(true);
-        
-    }
-
-    // hide loading screen d-none
-    if(loadingScreen != null) {
-        loadingScreen.classList.add("d-none");
-    }
-    if(imagesScreen != null) {
-        imagesScreen.classList.remove("d-none");
-    }
-
-}
-
-function updateImgCarousel(i: number, picDir: string, pic: string) {
-
-    if(i == 0) {
-        let firstImg = document.getElementById("firstImg")
-        if (firstImg != null) {
-            firstImg.setAttribute("src", picDir);
-        }
-    }
-    else {
-        if(picsCarouselInner == null) {
-            return;
-        }
-        if(carouselIndicatorsBilder == null) {
-            return;
-        }
-        let picnumber = i + 1;
-        picsCarouselInner.innerHTML = picsCarouselInner.innerHTML + '<div class="carousel-item carouselPic"> <div class="row"> <div class="col-lg-12 text-center" style="padding-bottom: 5px;"> <img src="' + picDir + '" alt="' + pic + '" class="img-fluid" style="max-height: 60vh;" /><p style="margin-bottom: 5vh;">' + picnumber + '</p> </div> </div> </div>';
-        carouselIndicatorsBilder.innerHTML = carouselIndicatorsBilder.innerHTML + '<button class="carouselPicIndicator" type="button" data-bs-target="#carouselIndicatorBilder" data-bs-slide-to="' + i + '" aria-label="Bild ' + i +'"></button>';
-    }
-}
-
-async function loadAllPics(bestof: boolean) {
-    var imgList = await getImgListJSON();
-    var i = 0;
-
-    imgList.folders.forEach((folder: { id:string, folderDir: string, filenames: any[]; }) => {
-        folder.filenames.forEach(pic => {
-            if(bestof && pic.includes("DSC")){
-                return;
-            }
-            var picDir = "img/picsByGS/" + folder.folderDir + "/" + pic;
-            updateImgCarousel(i, picDir, pic);
-            i++;
-        });
-    });
-    let loadedPics = document.getElementById("loadedPics");
-    if (loadedPics != null) {
-        loadedPics.innerHTML = i.toString();
-    }
-    
-}
-
-async function loadPicsFromFolder(choosenFilter: string) {
-    var imgList = await getImgListJSON();
-    var i = 0;
-
-    imgList.folders.forEach((folder: { id:string, folderDir: string, filenames: any[]; }) => {
-        if(folder.id == choosenFilter) {
-            folder.filenames.forEach(pic => {
-                var picDir = "img/picsByGS/" + folder.folderDir + "/" + pic;
-                updateImgCarousel(i, picDir, pic);
-                i++;
-            });
-        }
-        
-    });
-    let loadedPics = document.getElementById("loadedPics");
-    if (loadedPics != null) {
-        loadedPics.innerHTML = i.toString();
-    }
-}
-
-
-async function getImgListJSON() {
-    const response = await fetch("./img/picsByGS/imgList.json");
-    const json = await response.json();
-    return json;
-}
-
-
 function setBackgroundimage() {
     // set background image on body
-    const images = [
-        "img/TraegerVerein.jpg",
-        "img/background.jpg",
-        // Add more image URLs here
-    ];
-    const randomIndex = Math.floor(Math.random() * images.length);
-    const randomImage = images[randomIndex];
-
-    document.body.style.backgroundImage = `url('${randomImage}')`;
+    const switchElement = document.getElementById("flexSwitchCheckBackground") as HTMLInputElement;
+    if (switchElement != null && switchElement.checked) {
+        document.body.style.backgroundImage = `url('img/background.jpg')`;
+    } else {
+        document.body.style.backgroundImage = `url('img/TraegerVerein.jpg')`;
+    }
 }
 
 
@@ -263,7 +87,6 @@ function setBackgroundimage() {
 function init() {
 
     changeCountdown();
-    setBackgroundimage();
 
 
     var cookie = document.cookie;
@@ -292,7 +115,6 @@ function init() {
         const contactDiv = document.getElementById("contact") as HTMLElement;
         contactDiv.style.resize = "both";
     }
-    openModal();
 }
   
 init();

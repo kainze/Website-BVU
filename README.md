@@ -6,6 +6,9 @@ This is the Website of the Burschenverein Unterneukirchen
 - npm run watch
 
 # ToDos:
+- Tickets Link
 - Soziale Netwerke einbinden (Facebook, Instagram, Whatsapp)?
 - Links zu den anderen Vereinen?
 - Satzung brauchma de no?
+- Datenschutzerklärung und Impressum aktualisieren 
+- Countdown Uhrzeiten anpassen
