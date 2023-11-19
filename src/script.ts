@@ -248,8 +248,8 @@ async function getImgListJSON() {
 function setBackgroundimage() {
     // set background image on body
     const images = [
-        "./../../img/TraegerVerein.jpg",
-        "./../../img/background.jpg",
+        "img/TraegerVerein.jpg",
+        "img/background.jpg",
         // Add more image URLs here
     ];
     const randomIndex = Math.floor(Math.random() * images.length);
