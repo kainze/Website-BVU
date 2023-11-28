@@ -22,9 +22,17 @@ body{
   opacity: 0.95;
 }
 
-.containersection:first-child {
+img {
   opacity: 1;
 }
+
+nav {
+  opacity: 0.95;
+}
+
+//.containersection:first-child {
+//  opacity: 1;
+//}
 
 section{ 
   position:relative; 
