@@ -37,6 +37,11 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: Upload artifact for pages
+        uses: actions/upload-pages-artifact@v2
+        with:
+          # Upload dist repository
+          path: '.'
       - name: Archive production artifact
         uses: actions/upload-artifact@main
         with:
@@ -50,14 +55,13 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@main
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
-        with:
-          # Upload dist repository
+      - name: Download artifact
+        uses: actions/download-pages-artifact@v2
+        with: 
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
@@ -74,7 +78,7 @@ jobs:
         uses: actions/download-artifact@main
         with: 
           name: dist
-          path: dist
+          path: '.'
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
