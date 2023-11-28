@@ -12,7 +12,5 @@ This is the Website of the Burschenverein Unterneukirchen
 - Satzung schöner?
 - Animationen?
 
-
 # TODOS vorm Live nehmen
 - Impressum und Datenschutzerklärung aktualisieren
-- Meta Links aktualisieren
