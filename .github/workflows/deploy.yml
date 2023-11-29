@@ -22,12 +22,14 @@ concurrency:
 
 jobs:
   # Single deploy job since we're just deploying
-  build:
-    name: Build 
+  build-and-deploy-github-pages:
+    environment:
+      name: Build and Deploy Github Pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@main
+        uses: actions/checkout@v4
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
@@ -37,45 +39,37 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      #- name: Archive production artifact
-      #  uses: actions/upload-artifact@main
-      #  with:
-      #    path: '.'
-      - name: Upload artifact for pages
+      - name: Archive production artifact
+        uses: actions/upload-artifact@main
+        with:
+          name: dest
+          path: dest
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
           # Upload dist repository
           path: '.'
-  deploy-github-pages:
-    name: Deploy to Github Pages 🚀
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
   deploy-prod:
-    name: Deploy-prod 🚀
+    name: Deploy Prod 🚀
+    needs: build-and-deploy-github-pages
     environment: 'prod'
-    needs: deploy-github-pages
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout repository
         uses: actions/checkout@main
       - name: Download artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/download-artifact@main
         with: 
-          path: '.'
+          name: dest
+          path: dest
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
-          server: web17.alfahosting-server.de
-          username: h204810_github_deploy
+          server: ftp.enterflash.com
+          username: testcicd@enterflash.com
           password: ${{ secrets.ftp_password }}
