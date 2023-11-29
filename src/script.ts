@@ -14,7 +14,7 @@ let CountdownDates = [
     { date: new Date("Jul 27, 2024 19:00:00").getTime(), description: "zur Burschenparty"},
     { date: new Date("Jul 26, 2024 19:00:00").getTime(), description: "zum Wein- und Weißbierfest"},
     { date: new Date("Jul 25, 2024 19:00:00").getTime(), description: "zum Bieranstich"},
-    { date: new Date("Jul 25, 2024 19:00:00").getTime(), description: "zum Fest"},
+    { date: new Date("Jul 25, 2024 18:00:00").getTime(), description: "zum Fest"},
 ];
 
 var countDown_Date = new Date("Sep 06, 2024 18:00:00").getTime();
@@ -72,22 +72,20 @@ setInterval(function() {
     }
 }, 1000);
 
-function setBackgroundimage() {
-    // set background image on body
-    const switchElement = document.getElementById("flexSwitchCheckBackground") as HTMLInputElement;
-    if (switchElement != null && switchElement.checked) {
-        document.body.style.backgroundImage = `url('img/background.jpg')`;
-    } else {
-        document.body.style.backgroundImage = `url('img/TraegerVerein.jpg')`;
-    }
-}
-
+// function setBackgroundimage() {
+//     // set background image on body
+//     const switchElement = document.getElementById("flexSwitchCheckBackground") as HTMLInputElement;
+//     if (switchElement != null && switchElement.checked) {
+//         document.body.style.backgroundImage = `url('img/background.jpg')`;
+//     } else {
+//         document.body.style.backgroundImage = `url('img/TraegerVerein.jpg')`;
+//     }
+// }
 
 // init ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function init() {
 
     changeCountdown();
-
 
     var cookie = document.cookie;
     if (cookie.includes("InstaAccepted=true")) {
