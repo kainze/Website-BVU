@@ -37,10 +37,10 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Archive production artifact
-        uses: actions/upload-artifact@main
-        with:
-          path: '.'
+      #- name: Archive production artifact
+      #  uses: actions/upload-artifact@main
+      #  with:
+      #    path: '.'
       - name: Upload artifact for pages
         uses: actions/upload-pages-artifact@v2
         with:
@@ -70,9 +70,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@main
       - name: Download artifact
-        uses: actions/download-artifact@main
+        uses: actions/upload-pages-artifact@v2
         with: 
-          path: '/artifact'
+          path: '.'
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
