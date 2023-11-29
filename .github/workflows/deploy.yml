@@ -76,6 +76,6 @@ jobs:
       - name: Sync files to hosting
         uses: SamKirkland/FTP-Deploy-Action@4.0.0
         with: 
-          server: web17.alfahosting-server.de:21
+          server: web17.alfahosting-server.de
           username: h204810_github_deploy
           password: ${{ secrets.ftp_password }}
