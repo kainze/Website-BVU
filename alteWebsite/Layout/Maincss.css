@@ -1,0 +1,401 @@
+/*Allgemein*/
+a.Menu:link { color:black; text-decoration: none; }
+a.Menu:visited { color:black; text-decoration: none; }
+a.Menu:hover { color:black; text-decoration: underline; }
+a.Menu:active { color:black; text-decoration: none; }
+
+.noborder{
+    border:0px;
+}
+
+body{
+    font-family:Arial;
+    font-size:12px;
+    overflow-x:hidden;
+    overflow-y:scroll;
+}
+
+td { 
+    font-family:Arial;
+    font-size:12px;
+}
+
+input { 
+    background-color:#d9e8f9;
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+}
+
+input.Readonly {
+    width: auto;
+}
+
+td.borderBottom {
+    border-bottom:1px solid black;
+}
+
+div.backgrond {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #d9e8f9;
+}
+/*Error*/
+div.Error {
+    background-color:white;
+    vertical-align:middle;
+}
+
+table.Error {
+    border-style:solid;
+    border-color:black;
+    border-width:1px;
+    background-color:white;
+}
+
+/*Header*/
+img.Header {
+    position:absolute;
+    top:0px;
+    left:88px;
+}
+
+/*Menü*/
+img.HauptMenu {
+    position:absolute;
+    top:175px;
+    left:2px;
+}
+
+div.HauptMenu {
+    position:absolute;
+    top:230px;
+    left:30px;
+}
+
+img.MenuItemNew {
+    vertical-align:middle;
+    margin:0px;
+    padding:0px;
+}
+
+/*Inhalt*/
+
+div#divContentFrame {
+    position:absolute;
+    top:174px;
+    /*ContentWith und ContentLeft in BildDetail.php muss den gleichen wert wie width und left haben*/
+    left:175px;
+    width:645px;
+}
+
+/*Anmelden*/
+img.Anmelden {
+    position:absolute;
+    top:176px;
+    left:815px;
+}
+
+div.Anmelden {
+    position:absolute;
+    top:230px;
+    left:832px;
+}
+
+input.Anmelden { width:154px; }
+
+table.Anmelden { border:0px; }
+
+/*Abmelden*/
+img.Abmelden {
+    position:absolute;
+    top: 176px;
+    left:815px;
+}
+
+div.Abmelden {
+    position:absolute;
+    top:240px;
+    left:888px;
+}
+
+/*News*/
+textarea.NewNews {
+    width: 600px;
+    height: 300px;
+    display: none;
+}
+
+table.News {
+    border-collapse: collapse;
+    border:1px solid black;
+    width:100%;
+}
+
+td.NewsCaption {
+    width:100px;
+}
+
+td.NewsEditDel {
+    width:50px;
+}
+
+td.NewsFlag {
+    width:25px;
+}
+
+/*Termine*/
+table.Appointments{
+    width:100%;
+    border-collapse: collapse;
+}
+
+table.Appointments td{
+    border-bottom: 1px solid black;
+}
+
+div.Calendar {
+    position:absolute;
+    top:320px;
+    left:839px;
+}
+
+/*GB*/
+input.GBInput1{
+    visibility:hidden;
+}
+
+input.GBInput2{
+    position:absolute;
+    top:-1000px;
+    left:-1000px;
+}
+
+table.GB {	
+    border-collapse: collapse;
+    border:1px solid black;
+    width:100%;
+}
+
+td.GB {
+    width:100px;
+}
+
+textarea.GB {
+    width: 600px;
+    height: 300px;
+}
+
+td.GBSeitenZahl{
+    border:1px solid black;
+    text-align:center;
+    cursor:default;
+    width:20px;
+}
+
+td.GBSeitenZahl:hover, td.GBSeitenZahlAktiv:hover{
+    border: 1px solid black;
+    text-align:center;
+    width:20px;
+    cursor:default;
+    background-color:#5d89bd;
+}
+
+td.GBSeitenZahlAktiv{
+    border: 1px solid black;
+    text-align:center;
+    width:20px;
+    cursor:default;
+    background-color:#7fb7ff;
+}
+
+/*MenuBottom*/
+div.MenuBottom {
+    position:absolute;
+    top:520px;
+    left:15px;
+    width:150px;
+}
+
+/*Gallerie*/
+img.GalleryThumbnail {
+    border: 0px;
+}
+
+div.GallYearSep{
+    background: url(line.png) bottom left no-repeat;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+td.Gallerie {
+    text-align:center;
+}
+
+/*Bild Details*/
+div.GalleryPic{
+    position: absolute;
+    background-color: white;
+    border: 1px black solid;
+    padding: 3px;
+}
+
+a.CloseButton {
+    filter:alpha(opacity=40);
+    opacity:0.4;
+}
+
+a.CloseButton:Hover{
+    filter:alpha(opacity=100);
+    opacity:1;
+}
+
+div.CloseButton{
+    width: 100%;
+    height: 27px;
+    text-align: right;
+}
+
+div.CloseButtonHover{
+    width: 100%;
+    height: 35px;
+    text-align: right;
+}
+
+div.CloseButton img{
+    border: 1px solid black;
+}
+img.GalleryPic {
+    position: absolute;
+}
+
+table.GalleryPic {
+    border-collapse: collapse;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+table.GalleryPic td {
+    width: 100%;
+    height: 100%;
+}
+
+th.PicPrevNext {
+    height: 100%;
+}
+
+th.PicPrevNext img {
+    
+}
+
+th.PicPrevNextHover {
+    height: 100%;
+    background-color: white;
+    filter:alpha(opacity=40);
+    opacity:0.4;
+    cursor: pointer;
+}
+
+th.PicPrevNextHover img {
+    visibility: visible;
+}
+
+span.PicPrevNext{
+    height: 100%;
+    visibility: hidden;
+    filter:alpha(opacity=0);
+    opacity:0;
+}
+
+/* Vorstandschaft */
+div.personPointer {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    cursor: default;
+    background-image: url(transPixel.png);
+}
+
+div.personPointerActive {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #7fb7ff;
+    cursor: pointer;
+    background-image: url(transPixel.png);
+}
+
+a.personPointerLink
+{
+    color: black;
+    cursor: default;
+}
+
+a.personPointLinkActive {
+    color: #7fb7ff;
+    cursor: pointer;
+}
+
+/* Dialog */
+.DialogBackground {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+
+    background-color: black;
+    filter:alpha(opacity=80);
+    opacity:0.8;
+}
+
+.DialogOuter {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-top: 50px;
+
+    border: 0px;
+    margin: 0px;
+}
+
+.Dialog {
+    background-color: white;
+    visibility: hidden;
+    text-align: left;
+    display: inline-block;
+    padding: 6px;
+}
+
+.DialogContent {
+    border: 1px solid black;
+}
+
+/*
+div#divDialogOuter {
+    width: 100%;
+    height: 100%;
+
+    visibility: hidden;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 50px;
+}
+
+div#divDialog {
+    background-color: white;
+    padding: 6px;
+    visibility: hidden;
+
+    border: 1px solid black;
+    display: inline-block;
+    text-align: left;
+}
+*/

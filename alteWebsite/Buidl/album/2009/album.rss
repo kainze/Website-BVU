@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>2009</title>
+   	<link>..</link>
+        <generator>jAlbum 11</generator>
+   		<description></description>
+    	<jalbum:link rel="sub" href="Nachfeier vom Burschenfest in Gitlberg (14.03.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Steggalfischgrillen beim Salzinger (10.04.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Maibaumaufstoin in Greaboch (01.05.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="3. Burschenparty (20.06.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Burschengaufest Eggstaett (02.08.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Fuasboispui BV Unterneukirchen - BV Hoerpolding (21.08.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Ferienprogramm Schnupperklettern in Burghausen (09.09.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Burschenfest-Gedenkfeier (13.09.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Weihnachtsfeier beim Raspl (28.11.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Wintersonnwendfeuer (27.12.)/album.rss" />   	
+        
+    </channel>
+</rss>

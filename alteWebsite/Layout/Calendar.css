@@ -1,0 +1,67 @@
+table.Outer{
+	width:150px;
+	table-layout:fixed;
+}
+
+td.DaysWithEvent {
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	width:15px;
+	height:15px;
+	cursor:default;
+	font-size:10px;
+	background-color:gray
+}
+
+td.Today{
+	border-color: red;
+}
+
+td.Days {
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	width:15px;
+	height:15px;
+	cursor:default;
+	font-size:10px;
+}
+
+td.DaysHover {
+	text-align:center;
+	border-style:solid;
+	border-width:1px;
+	width:15px;
+	height:15px;
+	text-align:center;
+	background-color:#5d89bd;
+	cursor:default;
+	font-size:10px;
+}
+
+td.CalendarHeader {
+	text-align:center;
+	font-size:10px;
+}
+
+div.DayDetail {
+	background-color:white;
+	border-style:solid;
+	border-width:1px;
+	visibility:hidden;
+	position:absolute;
+	padding:5px;
+	font-size:12px;
+	width:400px;
+	z-index:999
+}
+
+td.HeadlineWithDate {
+	text-align:center;
+}
+
+img.HeadlineWithDate {
+	border-style:none;
+	cursor:pointer;
+}

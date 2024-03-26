@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>Fussballortsmeisterschaft (10.06.)</title>
+   	<link>../..</link>
+        <generator>jAlbum 11</generator>
+   		<description></description>
+        <item>
+            <title>197</title>
+            <link>slides/197.jpg#</link>
+            <pubDate>Fri, 11 Mar 2016 18:52:23 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/197.jpg" width="200" height="150"/>
+            <media:content type="image/jpeg" url="slides/197.jpg" width="640" height="480"/>
+            <guid isPermaLink="false">slides/197.jpg</guid>
+        </item>
+        <item>
+            <title>202</title>
+            <link>slides/202.jpg#</link>
+            <pubDate>Fri, 11 Mar 2016 18:52:23 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/202.jpg" width="200" height="150"/>
+            <media:content type="image/jpeg" url="slides/202.jpg" width="640" height="480"/>
+            <guid isPermaLink="false">slides/202.jpg</guid>
+        </item>
+        <item>
+            <title>201</title>
+            <link>slides/201.jpg#</link>
+            <pubDate>Fri, 11 Mar 2016 18:52:23 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/201.jpg" width="200" height="150"/>
+            <media:content type="image/jpeg" url="slides/201.jpg" width="640" height="480"/>
+            <guid isPermaLink="false">slides/201.jpg</guid>
+        </item>
+        <item>
+            <title>203</title>
+            <link>slides/203.jpg#</link>
+            <pubDate>Fri, 11 Mar 2016 18:52:23 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/203.jpg" width="200" height="150"/>
+            <media:content type="image/jpeg" url="slides/203.jpg" width="640" height="480"/>
+            <guid isPermaLink="false">slides/203.jpg</guid>
+        </item>
+        <item>
+            <title>199</title>
+            <link>slides/199.jpg#</link>
+            <pubDate>Fri, 11 Mar 2016 18:52:23 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/199.jpg" width="200" height="150"/>
+            <media:content type="image/jpeg" url="slides/199.jpg" width="640" height="480"/>
+            <guid isPermaLink="false">slides/199.jpg</guid>
+        </item>
+        <item>
+            <title>198</title>
+            <link>slides/198.jpg#</link>
+            <pubDate>Fri, 11 Mar 2016 18:52:23 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/198.jpg" width="200" height="150"/>
+            <media:content type="image/jpeg" url="slides/198.jpg" width="640" height="480"/>
+            <guid isPermaLink="false">slides/198.jpg</guid>
+        </item>
+        <item>
+            <title>200</title>
+            <link>slides/200.jpg#</link>
+            <pubDate>Fri, 11 Mar 2016 18:52:23 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/200.jpg" width="200" height="150"/>
+            <media:content type="image/jpeg" url="slides/200.jpg" width="640" height="480"/>
+            <guid isPermaLink="false">slides/200.jpg</guid>
+        </item>
+    </channel>
+</rss>

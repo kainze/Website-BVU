@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>Auszeit mit Pfr. Schauer</title>
+   	<link>../..</link>
+        <generator>jAlbum 11</generator>
+   		<description></description>
+        <item>
+            <title>Ausszeit 22.03.15</title>
+            <link>slides/Ausszeit 22.03.15.jpg#</link>
+            <pubDate>Wed, 11 Jan 2017 18:47:41 +0100</pubDate>
+            <description>User comments</description>
+            <media:description type="html">User comments</media:description>
+            <media:thumbnail url="thumbs/Ausszeit 22.03.15.jpg" width="200" height="150"/>
+            <media:content type="image/jpeg" url="slides/Ausszeit 22.03.15.jpg" width="816" height="612"/>
+            <jalbum:exif originalDate="22.03.15 17:07" cameraMake="SAMSUNG" cameraModel="GT-I9195"/>
+            <guid isPermaLink="false">slides/Ausszeit 22.03.15.jpg</guid>
+        </item>
+    </channel>
+</rss>

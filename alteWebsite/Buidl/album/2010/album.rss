@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>2010</title>
+   	<link>..</link>
+        <generator>jAlbum 11</generator>
+   		<description></description>
+    	<jalbum:link rel="sub" href="Steggalfischgrillen beim Salzinger (02.04.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Maibaumaufstoin in Stoa (01.05.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="4. Burschenparty (17.07.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Fahrt ins Blaue (11.09.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Nachfeier bei Grubers (25.09.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Adventsfeier beim Raspl (27.11.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Wintersonnwendfeuer (28.12.)/album.rss" />   	
+        
+    </channel>
+</rss>

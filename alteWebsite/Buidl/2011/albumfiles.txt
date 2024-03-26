@@ -1,0 +1,17 @@
+# This file is created by JAlbum. It sets custom file filtering and ordering for this image directory.
+# Each row indicate a file and it's order. Files not listed here are added to the end of the album
+# Rows beginning with "-" indicate excluded files.
+# Rows containing a tab character indicate links, where the text before the tab is the logical file name
+# and the path to the right is the target path.
+# Note: This file allows absolute paths to files and directories in other locations and thereby
+# allows you to compile albums consisting of files from several different locations.
+
+Patenbitten beim Leidmann (26.03.)
+Steggalfischgrillen beim Salzinger (22.04.)
+Aufbau für Wein- und Weissbierfest (26.07.)
+Wein- und Weissbierfest (29.07.)
+5. Burschenparty (30.07.)
+Gauburschenfest Hoerpolding (07.08.)
+Burschenolympiade Hoerpolding (14.08.)
+Nachfeier bei Handwerkers (19.11.)
+Wintersonnwendfeuer (28.12.)

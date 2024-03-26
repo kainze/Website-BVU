@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>Wintersonnwendfeuer</title>
+   	<link>../..</link>
+        <generator>jAlbum 11</generator>
+   		<description></description>
+        <item>
+            <title>12391798_981654121908470_8396443744306985129_n</title>
+            <link>slides/12391798_981654121908470_8396443744306985129_n.jpg#</link>
+            <pubDate>Wed, 11 Jan 2017 18:47:48 +0100</pubDate>
+            <description></description>
+            <media:description type="html"></media:description>
+            <media:thumbnail url="thumbs/12391798_981654121908470_8396443744306985129_n.jpg" width="200" height="150"/>
+            <media:content type="image/jpeg" url="slides/12391798_981654121908470_8396443744306985129_n.jpg" width="540" height="720"/>
+            <guid isPermaLink="false">slides/12391798_981654121908470_8396443744306985129_n.jpg</guid>
+        </item>
+    </channel>
+</rss>

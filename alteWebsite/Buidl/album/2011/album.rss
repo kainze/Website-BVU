@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0"
+     xmlns:media="http://search.yahoo.com/mrss/"
+     xmlns:jalbum="http://jalbum.net/jalbumrss">
+    <channel>
+        <title>2011</title>
+   	<link>..</link>
+        <generator>jAlbum 11</generator>
+   		<description></description>
+    	<jalbum:link rel="sub" href="Patenbitten beim Leidmann (26.03.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Steggalfischgrillen beim Salzinger (22.04.)/album.rss" />
+    	<jalbum:link rel="sub" href="Aufbau fuer Wein- und Weissbierfest (26.07.)/album.rss" />   		
+    	<jalbum:link rel="sub" href="Wein- und Weissbierfest (29.07.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="5. Burschenparty (30.07.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Gauburschenfest Hoerpolding (07.08.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Burschenolympiade Hoerpolding (14.08.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Nachfeier bei Handwerkers (19.11.)/album.rss" />   	
+    	<jalbum:link rel="sub" href="Wintersonnwendfeuer (28.12.)/album.rss" />   	
+	
+        
+    </channel>
+</rss>

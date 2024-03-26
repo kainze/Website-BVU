@@ -1,0 +1,18 @@
+# This file is created by JAlbum. It sets custom file filtering and ordering for this image directory.
+# Each row indicate a file and it's order. Files not listed here are added to the end of the album
+# Rows beginning with "-" indicate excluded files.
+# Rows containing a tab character indicate links, where the text before the tab is the logical file name
+# and the path to the right is the target path.
+# Note: This file allows absolute paths to files and directories in other locations and thereby
+# allows you to compile albums consisting of files from several different locations.
+
+Nachfeier vom Burschenfest in Gitlberg (14.03.)
+Steggalfischgrillen beim Salzinger (10.04.)
+Maibaumaufstoin in Greaboch (01.05.)
+3. Burschenparty (20.06.)
+Burschengaufest Eggstaett (02.08.)
+Fuasboispui BV Unterneukirchen - BV Hoerpolding (21.08.)
+Ferienprogramm Schnupperklettern in Burghausen (09.09.)
+Burschenfest-Gedenkfeier (13.09.)
+Weihnachtsfeier beim Raspl (28.11.)
+Wintersonnwendfeuer (27.12.)
