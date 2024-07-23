@@ -227,6 +227,7 @@
                 <h5 class="text-white"> Zudem freuen wir uns, die regionalen Firmen beim 'Tag der Betriebe' begrüßen zu
                   dürfen!🫱🏼‍🫲🏼 </h5>
                 <br>
+                <h6 class="text-white"> 🕖 Einlass 18:00 Uhr </h6>
                 <h6 class="text-white"> 🕖 Beginn 19:00 Uhr </h6>
                 <h6 class="text-white"> 🎟️ Eintritt Frei! </h6>
                 <h6 class="text-white"> 🍺 Weißbierkarussell </h6>
@@ -262,6 +263,7 @@
                   2024 ned fehlen.🍷🍻</h5>
                 <h5 class="text-white"> Wie gewohnt sorgt as Postamt Trio für beste Bierzeltstimmung!🥳</h5>
                 <br>
+                <h6 class="text-white"> 🕖 Einlass 18:00 Uhr </h6>
                 <h6 class="text-white"> 🕖 Beginn 19:00 Uhr </h6>
                 <h6 class="text-white"> 🍻 Verschiedene Weißbiere aus der Region </h6>
                 <h6 class="text-white"> 🍷 Ausgewählte Weine </h6>
@@ -300,6 +302,9 @@
                   legendäre Burschenparty🥳 </h5>
                 <h5 class="text-white"> Eingeheizt wird euch vom Dj Joe Lennox und für ausreichend kühle Getränke sorgen
                   wir an unserer spektakulären Gaufest-Bar… Ihr dürft gespannt sein😉🥃🍺 </h5>
+
+                <h6 class="text-white"> 🕖 Einlass 20:00 Uhr </h6>
+                <h6 class="text-white"> 🔞 Ab 18 Jahren </h6>
 
                 <h6 class="text-white"> Natürlich gibts auch wieder ein Busspezial <br> mit vergünstigten Eintritt und
                   1x Schnaps/Person
@@ -538,6 +543,8 @@
                 <p> <br></p>
                 <h5 class="text-white"> Für die perfekte Bierzeltstimmung sorgen de Obinger und späda an da Bar spuid
                   "Bast scho" für a mega Partystimmung auf!🎺🪗🥁🥳 </h5>
+                <a href="" data-bs-toggle="modal" data-bs-target="#ZugStellungModal" class="btn bg-dark text-white mt-3"
+                  target="_blank"> zur Zugaufstellung </a>
                 <br>
                 <!-- Zugaufstellung button?
                 <p> <br></p>
@@ -647,15 +654,24 @@
                   class="text-dark">Datenschutzerklärung</a></label>
             </div>
           </div>
-          <div class="col-12">
-            <a href="https://maps.app.goo.gl/9jVeRGfcZwTnWzjP6" class="btn bg-dark text-white mt-3" target="_blank"> zu Google Maps</a>
-            <!-- <a href="setLink" class="btn bg-dark text-white mt-3" target="_blank"> Anfahrt Auto </a> -->
-            <!-- <a href="setLink" class="btn bg-dark text-white mt-3" target="_blank"> Anfahrt Bus </a> -->
+          <div class="row">
+            <div class="col-4">
+              <a href="https://maps.app.goo.gl/9jVeRGfcZwTnWzjP6" class="btn bg-dark text-white mt-3" target="_blank">
+                zu Google Maps</a>
+            </div>
+            <div class="col-4">
+              <a href="" data-bs-toggle="modal" data-bs-target="#AnfahrtPKWModal" class="btn bg-dark text-white mt-3"
+                target="_blank"> Anfahrt PKW </a>
+            </div>
+            <div class="col-4">
+              <a href="" data-bs-toggle="modal" data-bs-target="#AnfahrtBusModal" class="btn bg-dark text-white mt-3"
+                target="_blank"> Anfahrt Bus </a>
+            </div>
           </div>
         </div>
         <div class="col-lg-2 d-none d-lg-block"></div>
-        </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -782,6 +798,67 @@
     </div>
   </footer>
 
+  <!-- Modal Anfahrt PKW-->
+  <div class="modal fade" id="AnfahrtPKWModal" tabindex="-1" aria-labelledby="AnfahrtPKWModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="AnfahrtPKWModalLabel">Anfahrt PKW</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="col">
+            <img src="img/2024-PKW-Anfahrplan.jpg" alt="Anfahrt PKW" loading="lazy" class="img-fluid">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Anfahrt Bus -->
+  <div class="modal fade" id="AnfahrtBusModal" tabindex="-1" aria-labelledby="AnfahrtBusModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="AnfahrtBusModalLabel">Anfahrt Bus</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="col">
+            <img src="img/2024-Busplan_neu.jpg" alt="Anfahrt Bus" loading="lazy" class="img-fluid">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Zugaufstellung -->
+  <div class="modal fade" id="ZugStellungModal" tabindex="-1" aria-labelledby="ZugStellungModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ZugStellungModalLabel">Zugaufstellung</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="col">
+            <img src="img/2024 Zugaufstellung.jpg" alt="Zugaufstellung" loading="lazy" class="img-fluid">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Modal Tag00 -->
   <div class="modal fade" id="Tag00Modal" tabindex="-1" aria-labelledby="Tag00ModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -845,6 +922,7 @@
             <h5 class="text-dark"> Zudem freuen wir uns, die regionalen Firmen beim 'Tag der Betriebe' begrüßen zu
               dürfen!🫱🏼‍🫲🏼 </h5>
             <br>
+            <h6 class="text-dark"> 🕖 Einlass 18:00 Uhr </h6>
             <h6 class="text-dark"> 🕖 Beginn 19:00 Uhr </h6>
             <h6 class="text-dark"> 🎟️ Eintritt Frei! </h6>
             <h6 class="text-dark"> 🍺 Weißbierkarussell </h6>
@@ -879,6 +957,7 @@
               ned fehlen.🍷🍻</h5>
             <h5 class="text-dark"> Wie gewohnt sorgt as Postamt Trio für beste Bierzeltstimmung!🥳</h5>
             <br>
+            <h6 class="text-dark"> 🕖 Einlass 18:00 Uhr </h6>
             <h6 class="text-dark"> 🕖 Beginn 19:00 Uhr </h6>
             <h6 class="text-dark"> 🍻 Verschiedene Weißbiere aus der Region </h6>
             <h6 class="text-dark"> 🍷 Ausgewählte Weine </h6>
@@ -914,6 +993,9 @@
               Burschenparty🥳 </h5>
             <h5 class="text-dark"> Eingeheizt wird euch vom Dj Joe Lennox und für ausreichend kühle Getränke sorgen wir
               an unserer spektakulären Gaufest-Bar… Ihr dürft gespannt sein😉🥃🍺 </h5>
+
+            <h6 class="text-dark"> 🕖 Einlass 20:00 Uhr </h6>
+            <h6 class="text-dark"> 🔞 Ab 18 Jahren </h6>
 
             <h6 class="text-dark"> Natürlich gibts auch wieder ein Busspezial <br> mit vergünstigten Eintritt und 1x
               Schnaps/Person
@@ -1140,6 +1222,8 @@
             <p> <br></p>
             <h5 class="text-dark"> Für die perfekte Bierzeltstimmung sorgen de Obinger und späda an da Bar spuid "Bast
               scho" für a mega Partystimmung auf!🎺🪗🥁🥳 </h5>
+            <a href="" data-bs-toggle="modal" data-bs-target="#ZugStellungModal" class="btn bg-dark text-white mt-3"
+              target="_blank"> zur Zugaufstellung </a>
           </div>
         </div>
         <div class="modal-footer">
