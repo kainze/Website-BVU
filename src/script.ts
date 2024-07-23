@@ -5,16 +5,16 @@ let countDown_minutes = document.getElementById("minutes");
 let countDown_seconds = document.getElementById("seconds");
 let CountdownDescription = document.getElementById("CountdownDescription");
 let CountdownDates = [
-    { date: new Date("Aug 04, 2024 19:00:00").getTime(), description: "zum Festsonntag"},
-    { date: new Date("Aug 03, 2024 19:00:00").getTime(), description: "zum Festabend"},
-    { date: new Date("Aug 02, 2024 19:00:00").getTime(), description: "zur Almrauschparty"},
-    { date: new Date("Aug 01, 2024 19:00:00").getTime(), description: "zur BVU Brass Night"},
-    { date: new Date("Jul 30, 2024 19:00:00").getTime(), description: "zum Kabarett"},
-    { date: new Date("Jul 28, 2024 19:00:00").getTime(), description: "zum Rasenmäherbulldogrennen"},
-    { date: new Date("Jul 27, 2024 19:00:00").getTime(), description: "zur Burschenparty"},
-    { date: new Date("Jul 26, 2024 19:00:00").getTime(), description: "zum Wein- und Weißbierfest"},
-    { date: new Date("Jul 25, 2024 19:00:00").getTime(), description: "zum Bieranstich"},
-    { date: new Date("Jul 25, 2024 18:00:00").getTime(), description: "zum Fest"},
+    { date: new Date("Aug 04, 2024 07:00:00").getTime(), description: "zum Festsonntag", enddate: new Date("Aug 04, 2024 23:00:00").getTime()},
+    { date: new Date("Aug 03, 2024 19:00:00").getTime(), description: "zum Festabend", enddate: new Date("Aug 03, 2024 23:00:00").getTime()},
+    { date: new Date("Aug 02, 2024 20:00:00").getTime(), description: "zur Almrauschparty", enddate: new Date("Aug 02, 2024 23:00:00").getTime()},
+    { date: new Date("Aug 01, 2024 18:00:00").getTime(), description: "zur BVU Brass Night", enddate: new Date("Aug 01, 2024 23:00:00").getTime()},
+    { date: new Date("Jul 30, 2024 18:00:00").getTime(), description: "zum Kabarett", enddate: new Date("Jul 30, 2024 23:00:00").getTime()},
+    { date: new Date("Jul 28, 2024 10:00:00").getTime(), description: "zum Rasenmäherbulldogrennen", enddate: new Date("Jul 28, 2024 23:00:00").getTime()},
+    { date: new Date("Jul 27, 2024 20:00:00").getTime(), description: "zur Burschenparty", enddate: new Date("Jul 27, 2024 23:00:00").getTime()},
+    { date: new Date("Jul 26, 2024 19:00:00").getTime(), description: "zum Wein- und Weißbierfest", enddate: new Date("Jul 26, 2024 23:00:00").getTime()},
+    { date: new Date("Jul 25, 2024 19:00:00").getTime(), description: "zum Bieranstich", enddate: new Date("Jul 26, 2024 23:00:00").getTime()},
+    { date: new Date("Jul 25, 2024 18:00:00").getTime(), description: "zum Fest", enddate: new Date("Jul 24, 2024 18:00:00").getTime()},
 ];
 
 var countDown_Date = new Date("Sep 06, 2024 18:00:00").getTime();
@@ -57,7 +57,7 @@ function changeCountdown() {
             return;
         }
 
-        if(element.date > new Date().getTime()) {
+        if(element.enddate > new Date().getTime()) {
             countDown_Date = element.date;
             CountdownDescription.innerText = element.description;
         }
@@ -108,7 +108,8 @@ function init() {
     if (cookie.includes("MapsAccepted=true")) {
         const MapsCard = document.getElementById("MapsCard") as HTMLElement;
         if (MapsCard != null) {
-            MapsCard.innerHTML = "<iframe src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5385.758301536132!2d12.62573263860528!3d48.167979574388816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4775dca0a0669d85%3A0xa7984d9e3e37c1ce!2sFreiwillige%20Feuerwehr%20Unterneukirchen!5e1!3m2!1sde!2sde!4v1670450915896!5m2!1sde!2sde width=100% height=100% style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade></iframe>";
+            MapsCard.innerHTML = "<iframe src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.7639018928717!2d12.626980776832259!3d48.1726314487195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4775db0050764fd7%3A0xbfc3eef7f1785f77!2sBurschengaufest%202024!5e0!3m2!1sde!2sde!4v1721730208950!5m2!1sde!2sde width=100% height=100% style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade></iframe>";
+            MapsCard.setAttribute("style", MapsCard.getAttribute('style') + "min-height: 50vh;");
         }
         const contactDiv = document.getElementById("contact") as HTMLElement;
         contactDiv.style.resize = "both";
@@ -156,7 +157,8 @@ function LoadMapsCard() {
         // Karte laden
         const MapsCard = document.getElementById("MapsCard") as HTMLElement;
         if (MapsCard != null) {
-            MapsCard.innerHTML = "<iframe src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5385.758301536132!2d12.62573263860528!3d48.167979574388816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4775dca0a0669d85%3A0xa7984d9e3e37c1ce!2sFreiwillige%20Feuerwehr%20Unterneukirchen!5e1!3m2!1sde!2sde!4v1670450915896!5m2!1sde!2sde width=100% height=100% style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade></iframe>";
+            MapsCard.innerHTML = "<iframe src=https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.7639018928717!2d12.626980776832259!3d48.1726314487195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4775db0050764fd7%3A0xbfc3eef7f1785f77!2sBurschengaufest%202024!5e0!3m2!1sde!2sde!4v1721730208950!5m2!1sde!2sde width=100% height=100% style=border:0; allowfullscreen= loading=lazy referrerpolicy=no-referrer-when-downgrade></iframe>";
+            MapsCard.setAttribute("style", MapsCard.getAttribute('style') + "min-height: 50vh;");
         }
         
     }
