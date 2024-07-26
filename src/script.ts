@@ -13,7 +13,7 @@ let CountdownDates = [
     { date: new Date("Jul 28, 2024 10:00:00").getTime(), description: "zum Rasenmäherbulldogrennen", enddate: new Date("Jul 28, 2024 23:00:00").getTime()},
     { date: new Date("Jul 27, 2024 20:00:00").getTime(), description: "zur Burschenparty", enddate: new Date("Jul 27, 2024 23:00:00").getTime()},
     { date: new Date("Jul 26, 2024 19:00:00").getTime(), description: "zum Wein- und Weißbierfest", enddate: new Date("Jul 26, 2024 23:00:00").getTime()},
-    { date: new Date("Jul 25, 2024 19:00:00").getTime(), description: "zum Bieranstich", enddate: new Date("Jul 26, 2024 23:00:00").getTime()},
+    { date: new Date("Jul 25, 2024 19:00:00").getTime(), description: "zum Bieranstich", enddate: new Date("Jul 25, 2024 23:00:00").getTime()},
     { date: new Date("Jul 25, 2024 18:00:00").getTime(), description: "zum Fest", enddate: new Date("Jul 24, 2024 18:00:00").getTime()},
 ];
 
@@ -29,6 +29,11 @@ function setCountdown() {
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    if (days < 0) days = 0;
+    if (hours < 0) hours = 0;
+    if (minutes < 0) minutes = 0;
+    if (seconds < 0) seconds = 0;
 
     if (countDown_days != null) {
         countDown_days.innerHTML = days.toString();
