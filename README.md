@@ -6,8 +6,6 @@ This is the Website of the Burschenverein Unterneukirchen
 - npm run watch
 
 # ToDos:
-- deploy to prod funktioniert noch nicht richtig
-- Countdown Uhrzeiten anpassen
 - Vereinsentstehung rein
 - Soziale Netwerke dynamische Posts?
 - Satzung schöner?
