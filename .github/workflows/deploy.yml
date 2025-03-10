@@ -45,15 +45,15 @@ jobs:
           name: dest
           path: dest
       - name: Setup Pages
-        uses: actions/configure-pages@v4 #3
+        uses: actions/configure-pages@v5 #3
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           # Upload dist repository
           path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
   deploy-prod:
     name: Deploy Prod 🚀
     needs: build-and-deploy-github-pages
