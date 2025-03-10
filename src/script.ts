@@ -5,6 +5,7 @@ let countDown_minutes = document.getElementById("minutes");
 let countDown_seconds = document.getElementById("seconds");
 let CountdownDescription = document.getElementById("CountdownDescription");
 let CountdownDates = [
+    { date: new Date("Apr 18, 2025 11:00:00").getTime(), description: "Steckalfischgrillen", enddate: new Date("Apr 18, 2025 14:00:00").getTime()},
     { date: new Date("Aug 04, 2024 07:00:00").getTime(), description: "zum Festsonntag", enddate: new Date("Aug 04, 2024 23:00:00").getTime()},
     { date: new Date("Aug 03, 2024 19:00:00").getTime(), description: "zum Festabend", enddate: new Date("Aug 03, 2024 23:00:00").getTime()},
     { date: new Date("Aug 02, 2024 20:00:00").getTime(), description: "zur Almrauschparty", enddate: new Date("Aug 02, 2024 23:00:00").getTime()},
@@ -76,16 +77,6 @@ setInterval(function() {
         setCountdown();
     }
 }, 1000);
-
-// function setBackgroundimage() {
-//     // set background image on body
-//     const switchElement = document.getElementById("flexSwitchCheckBackground") as HTMLInputElement;
-//     if (switchElement != null && switchElement.checked) {
-//         document.body.style.backgroundImage = `url('img/background.jpg')`;
-//     } else {
-//         document.body.style.backgroundImage = `url('img/TraegerVerein.jpg')`;
-//     }
-// }
 
 // init ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function init() {
