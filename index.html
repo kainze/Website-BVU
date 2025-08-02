@@ -8,6 +8,7 @@
   <meta property="og:image" content="https://www.bv-unterneukirchen.de/android-chrome-512x512.png" />
   <meta property="og:title" content="Burschenverein Unterneukirchen" />
   <meta property="og:description" content="Da BVU deaf eich recht herzlich auf seina Seitn begriassn." />
+  <meta name="description" content="Burschenverein Unterneukirchen – Offizielle Webseite mit Infos zu Veranstaltungen, Stiftung und Social Media. Griaß God beim BVU!" />
 
   <!-- <link href="node_modules/bootstrap/dist/css/bootstrap.min.css"rel="stylesheet"/> -->
   <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css" />
@@ -94,7 +95,7 @@
             2024 ham wir zu unserem 110-jährigen Bestehen as Burschengaufest 2024 ausrichten derfa.
           </p>
           <a href="/fest2024.html" class="btn bg-primary text-white mt-1">
-            Infos zum Gaufest 2024
+            Rückblick Gaufest 2024
           </a>
 
         </div>
@@ -261,6 +262,9 @@
               </a>
               <br>
               <br>
+              <p>Oder über unser Email <br> 
+                <span id="email-link"></span>
+              </p>
               <br>
             </div>
           </div>
@@ -275,11 +279,19 @@
             </div>
           </div>
           <div class="row">
-            <div class="col-lg-12 text-white">
-              <p>Daniel Schmuck, 1. Vorstand: <br> <a class="text-warning" href="mailto:DanielSchmuck@kabelmail.de"
-                  style="text-decoration: none;">DanielSchmuck@kabelmail.de</a></p>
-              <p>Stefan Mitterer, 2. Vorstand: <br> <a class="text-warning" href="mailto:Wieser95@web.de"
-                  style="text-decoration: none;">Wieser95@web.de</a></p>
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-6" id="InstaCard">
+              <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckInsta" onclick="LoadInstaCard()">
+                <label class="form-check-label text-start text-white" for="flexSwitchCheckInsta">Ich bin damit einverstanden, dass mir Inhalte von Instagram angezeigt werden. Es können dabei personenbezogene Daten an den Anbieter des Inhalts und Drittdienste übermittelt werden. Mehr dazu in der <a href="#navtodatenschutzerklaerung" data-bs-toggle="modal" data-bs-target="#datenschutzerklaerungModal" class="text-light-grey">Datenschutzerklärung</a></label>
+                <br>
+                <br>
+                <br>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <br>
               <br>
             </div>
           </div>
@@ -351,9 +363,10 @@
   </script>
 
   <!-- <script src="node_modules/jquery/dist/jquery.min.js"></script> -->
-  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="dest/js/script.js?v=1.4"></script>
+  <script defer src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script defer src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script defer src="dest/js/script.js?v=1.5"></script>
+
 </body>
 
 </html>
