@@ -82,7 +82,6 @@ setInterval(function() {
 
 // init ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 function init() {
-
     changeCountdown();
 
     var cookie = document.cookie;
@@ -109,6 +108,14 @@ function init() {
         emailLink.innerHTML = `<a class="text-warning" href="mailto:${email}" style="text-decoration: none;">
             ${email}
         </a>`;
+    }
+    
+    if (cookie.includes("CalendarAccepted=true")) {
+        const SwitchCalendarCard = document.getElementById("flexSwitchCheckCalendar") as HTMLInputElement;
+        if(SwitchCalendarCard) {
+            SwitchCalendarCard.checked = true;
+            LoadCalendarCard();
+        }
     }
 }
   
@@ -167,3 +174,30 @@ function LoadMapsCard() {
         }
     }
 }
+
+function LoadCalendarCard() {
+    const SwitchCalendarCard = document.getElementById("flexSwitchCheckCalendar") as HTMLInputElement;
+    if(SwitchCalendarCard.checked) {
+
+        // Cookie Setzen
+        var now = new Date();
+        var expireDate = new Date(now.getTime() + (1000 * 60 * 60 * 24 * 365));
+        document.cookie = "CalendarAccepted" + "=" + "true" + "; expires=" + expireDate.toString() + "; SameSite=Strict;";
+        
+        // Karte laden
+        const CalendarCard = document.getElementById("CalendarCard") as HTMLElement;
+        if (CalendarCard != null) {
+            CalendarCard.innerHTML = "<hr class='text-light-grey'> <iframe src='https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBerlin&showPrint=0&showTz=0&showCalendars=0&title&showTitle=0&src=NGIxZGY0OWY3NDlkMTVkN2EyZTg4N2QzOGU5OTkyMThkMjE5MzNkM2VjZTFiNDI5MjA0MzM4Nzk1M2JiZTRmMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230b8043'style='border-width:0' width='100%' height='600' frameborder='0' scrolling='no'></iframe></div>";
+            CalendarCard.setAttribute("style", CalendarCard.getAttribute('style') + "min-height: 50vh;");
+        }
+    }
+}
+
+function copyICSLink() {
+    const link = "webcal://calendar.google.com/calendar/ical/4b1df49f749d15d7a2e887d38e999218d21933d3ece1b4292043387953bbe4f2%40group.calendar.google.com/public/basic.ics";
+    navigator.clipboard.writeText(link).then(() => {
+      const toastElement = document.getElementById('copyToast');
+      const toast = new window.bootstrap.Toast(toastElement);
+      toast.show();
+    });
+  }
