@@ -109,7 +109,7 @@ function init() {
             ${email}
         </a>`;
     }
-    
+
     if (cookie.includes("CalendarAccepted=true")) {
         const SwitchCalendarCard = document.getElementById("flexSwitchCheckCalendar") as HTMLInputElement;
         if(SwitchCalendarCard) {
@@ -196,8 +196,9 @@ function LoadCalendarCard() {
 function copyICSLink() {
     const link = "webcal://calendar.google.com/calendar/ical/4b1df49f749d15d7a2e887d38e999218d21933d3ece1b4292043387953bbe4f2%40group.calendar.google.com/public/basic.ics";
     navigator.clipboard.writeText(link).then(() => {
-      const toastElement = document.getElementById('copyToast');
-      const toast = new window.bootstrap.Toast(toastElement);
-      toast.show();
+        const toastElement = document.getElementById('copyToast');
+        // @ts-ignore
+        const toast = new window.bootstrap.Toast(toastElement);
+        toast.show();
     });
   }
