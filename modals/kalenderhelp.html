@@ -1,0 +1,95 @@
+<!-- Modal kalenderHelp -->
+<div class="modal fade" id="kalenderHelpModal" tabindex="-1" aria-labelledby="kalenderHelpModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-light-grey">
+      <div class="modal-header">
+        <h5 class="modal-title" id="kalenderHelpModalLabel">Kalender abonnieren</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="col">
+          <p class="text-dark small mb-3">Hier konsd du den Kalender abonnieren, Termine werden dann automatisch aktualisiert.</p>
+
+          <!-- Empfehlungen -->
+          <div class="mb-3">
+            <a href="webcal://calendar.google.com/calendar/ical/4b1df49f749d15d7a2e887d38e999218d21933d3ece1b4292043387953bbe4f2%40group.calendar.google.com/public/basic.ics"
+               class="btn bg-primary text-white btn-sm me-2 mb-2">
+              <i class="bi bi-apple"></i> iPhone / iPad: In iOS abonnieren
+            </a>
+            <a href="https://calendar.google.com/calendar/r?cid=4b1df49f749d15d7a2e887d38e999218d21933d3ece1b4292043387953bbe4f2%40group.calendar.google.com"
+               target="_blank" rel="noopener" class="btn bg-primary text-white btn-sm mb-2">
+              <i class="bi bi-android2"></i> Android: In Google Kalender abonnieren
+            </a>
+            <p class="text-dark small m-0"><i class="bi bi-info-circle"></i> Samsung‑Kalender Nutzer siehe Anleitung unten.</p>
+          </div>
+
+          <hr class="text-dark">
+
+          <!-- Fallback: URL kopieren -->
+          <h6 class="text-dark mb-2"><i class="bi bi-clipboard"></i> Alternative: URL kopieren</h6>
+          <p class="text-dark small mb-2">Falls die Buttons bei dir nicht funktionieren, diese URL in deinem Wunschkalender per
+            „Kalender per URL/Abonnement hinzufügen“ einfügen.</p>
+          <code class="d-block text-dark small" style="word-break: break-all;">
+            https://calendar.google.com/calendar/ical/4b1df49f749d15d7a2e887d38e999218d21933d3ece1b4292043387953bbe4f2%40group.calendar.google.com/public/basic.ics
+          </code>
+          <button onclick="copyICSLink()" class="btn btn-outline-secondary btn-sm mt-2">
+            <i class="bi bi-clipboard"></i> URL kopieren
+          </button>
+
+          <hr class="text-dark">
+
+          <!-- Samsung Ablauf -->
+          <h6 class="text-dark mb-2"><i class="bi bi-phone"></i> Samsung Kalender (Galaxy)</h6>
+          <ol class="text-dark small mb-3 ps-3">
+            <li>Auf dieser Seite im Kalender unten rechts auf das <strong>+</strong> tippen.</li>
+            <li>Es öffnet sich die Webansicht von Google Kalender. Auf <strong>Hinzufügen</strong> tippen.</li>
+            <li>Dann Samsung <strong>Kalender</strong> öffnen → links <strong>Menü</strong> öffnen → Haken bei
+                <strong>BVU Mitglieder</strong> setzen.</li>
+          </ol>
+          <p class="text-dark small mb-2"> <i class="bi bi-info-circle"></i> Fehlt der Kalender? Unten <strong>Jetzt synchronisieren</strong> tippen.</p>
+
+          <!-- Styles nur für dieses Modal -->
+          <style>
+            .bvu-imgstack img{display:block;width:100%;height:auto;border-radius:.25rem;margin-bottom:.5rem}
+            .bvu-imgswap{position:relative}
+            .bvu-imgswap img{display:block;width:100%;height:auto;border-radius:.25rem}
+            .bvu-imgswap .swap-top{position:absolute;inset:0;opacity:0;animation:bvuSwap 1.2s steps(1,end) infinite}
+            @keyframes bvuSwap { 0%,49%{opacity:0} 50%,100%{opacity:1} }
+            @media (prefers-reduced-motion: reduce){ .bvu-imgswap .swap-top{animation:none} }
+          </style>
+
+          <!-- Bilder: untereinander; Step 3/4 als „GIF“-Wechsel -->
+          <br>
+          <h6 class="text-dark mb-2"><i class="bi bi-phone"></i> Anleitung Bild für Bild</h6>
+          <div class="bvu-imgstack mt-2">
+            <figure class="mb-2">
+              <img src="/img/addtoSamsungCalendar/step1.jpg" loading="lazy" decoding="async"
+                   alt="Schritt 1: Im Website‑Kalender unten rechts auf das Plus tippen.">
+              <figcaption class="text-dark small mt-1">Schritt 1: Im Website‑Kalender unten rechts auf das Plus tippen.</figcaption>
+            </figure>
+
+            <figure class="mb-2">
+              <img src="/img/addtoSamsungCalendar/step2.jpg" loading="lazy" decoding="async"
+                   alt="Schritt 2: In der Google‑Kalender‑Webansicht auf Hinzufügen tippen.">
+              <figcaption class="text-dark small mt-1">Schritt 2: In der Google‑Kalender‑Webansicht auf Hinzufügen tippen.</figcaption>
+            </figure>
+
+            <figure class="bvu-imgswap mb-2">
+              <img src="/img/addtoSamsungCalendar/step3.jpg" loading="lazy" decoding="async"
+                   alt="Schritt 3: Samsung Kalender Menü mit Eintrag BVU Mitglieder, Haken nicht gesetzt.">
+              <img src="/img/addtoSamsungCalendar/step4.jpg" class="swap-top" loading="lazy" decoding="async"
+                   alt="Schritt 3: Samsung Kalender Menü mit Eintrag BVU Mitglieder, Haken gesetzt.">
+              <figcaption class="text-dark small mt-1">Schritt 3: Im Samsung Kalender Haken bei „BVU Mitglieder“ setzen.</figcaption>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Schließen</button>
+      </div>
+    </div>
+  </div>
+</div>
