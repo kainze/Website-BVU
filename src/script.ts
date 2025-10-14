@@ -187,7 +187,9 @@ function LoadCalendarCard() {
         // Karte laden
         const CalendarCard = document.getElementById("CalendarCard") as HTMLElement;
         if (CalendarCard != null) {
-            CalendarCard.innerHTML = "<hr class='text-light-grey'> <iframe src='https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FBerlin&showPrint=0&showTz=0&showCalendars=0&title&showTitle=0&src=NGIxZGY0OWY3NDlkMTVkN2EyZTg4N2QzOGU5OTkyMThkMjE5MzNkM2VjZTFiNDI5MjA0MzM4Nzk1M2JiZTRmMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230b8043'style='border-width:0' width='100%' height='600' frameborder='0' scrolling='no'></iframe></div>";
+            CalendarCard.innerHTML = "<hr class='text-light-grey'> \
+                <iframe src='https://calendar.google.com/calendar/embed?height=600&wkst=2&hl=de&ctz=Europe%2FBerlin&showPrint=0&showTz=0&showCalendars=0&title&showTitle=0&src=NGIxZGY0OWY3NDlkMTVkN2EyZTg4N2QzOGU5OTkyMThkMjE5MzNkM2VjZTFiNDI5MjA0MzM4Nzk1M2JiZTRmMkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%230b8043' \
+                style='border-width:0' width='100%' height='600' frameborder='0' scrolling='no'></iframe></div>";
             CalendarCard.setAttribute("style", CalendarCard.getAttribute('style') + "min-height: 50vh;");
         }
     }
