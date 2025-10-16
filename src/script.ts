@@ -5,6 +5,7 @@ let countDown_minutes = document.getElementById("minutes");
 let countDown_seconds = document.getElementById("seconds");
 let CountdownDescription = document.getElementById("CountdownDescription");
 let CountdownDates = [
+    { date: new Date("Dec 25, 2025 17:30:00").getTime(), description: "Wintersonnwendfeuer", enddate: new Date("Dec 28, 2025 23:30:00").getTime()},
     { date: new Date("Aug 23, 2025 20:00:00").getTime(), description: "Burschenparty", enddate: new Date("Aug 23, 2025 23:30:00").getTime()},
     { date: new Date("Aug 22, 2025 19:30:00").getTime(), description: "Wein-und Weißbierfest", enddate: new Date("Aug 22, 2025 23:30:00").getTime()},
     { date: new Date("Apr 18, 2025 11:00:00").getTime(), description: "Steckalfischgrillen", enddate: new Date("Apr 18, 2025 14:00:00").getTime()},
@@ -117,6 +118,16 @@ function init() {
             LoadCalendarCard();
         }
     }
+
+    // Auto Load Kalender for WhatsApp Mitglieder
+    const qp = new URLSearchParams(location.search);
+    if (qp.get("auto") === "1") {
+        const SwitchCalendarCard = document.getElementById("flexSwitchCheckCalendar") as HTMLInputElement;
+        if(SwitchCalendarCard) {
+            SwitchCalendarCard.checked = true;
+            LoadCalendarCard();
+        }
+    }
 }
   
 init();
@@ -194,6 +205,12 @@ function LoadCalendarCard() {
         }
     }
 }
+
+document.addEventListener("shown.bs.modal", (e: any) => {
+  if (e?.target?.id !== "kalenderHelpModal") return;
+  const el = document.getElementById("step0-consent");
+  if (el) el.classList.toggle("d-none", document.cookie.includes("CalendarAccepted=true"));
+});
 
 function copyICSLink() {
     const link = "webcal://calendar.google.com/calendar/ical/4b1df49f749d15d7a2e887d38e999218d21933d3ece1b4292043387953bbe4f2%40group.calendar.google.com/public/basic.ics";
