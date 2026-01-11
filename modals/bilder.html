@@ -3,17 +3,63 @@
 <div class="modal fade" id="bilderModal" tabindex="-1" aria-labelledby="bilderModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-fullscreen">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="bilderModalLabel">Fotogalerie</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-header d-flex align-items-center gap-2">
+                <button type="button" class="btn btn-secondary" id="bvu-gallery-back-overview">Zurück</button>
+                <h5 class="modal-title mb-0" id="bilderModalLabel">Fotogalerie - Burschenverein Unterneukirchen</h5>
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body bg-primary text-white">
-                <div class="col">
-                    <iframe
-                        src="https://www.tmon-media.de"
-                        width="100%"
-                        height="800">
-                    </iframe>
+                <div class="container-fluid position-relative" id="bvu-gallery" data-gallery-json="gallery/gallery.json">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <div></div>
+                        <span class="small text-light-grey" id="bvu-gallery-status"></span>
+                    </div>
+
+                    <!-- Overview (years + event cards) -->
+                    <div id="bvu-gallery-overview"></div>
+
+                    <!-- Event view (image grid) -->
+                    <div id="bvu-gallery-event" class="d-none">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            
+                            <div class="text-end">
+                                <div class="h5 mb-0" id="bvu-gallery-event-title"></div>
+                                <div class="small text-light-grey" id="bvu-gallery-event-date"></div>
+                            </div>
+                        </div>
+                        <div id="bvu-gallery-event-images" class="row g-2"></div>
+                    </div>
+
+                    <!-- Slideshow overlay (carousel) -->
+                    <div id="bvu-gallery-slideshow" class="d-none position-fixed top-0 start-0 w-100 h-100 bg-black bvu-bg-opacity-85" style="z-index: 1056;">
+                        <div class="w-100 d-flex justify-content-center p-3" style="z-index: 2;">
+                            <div class="w-100 d-flex align-items-center justify-content-between px-3 py-2 rounded bg-secondary bvu-bg-opacity-90" style="max-width: 1100px;">
+                                <div class="text-center flex-grow-1">
+                                    <div class="h5 mb-0" id="bvu-gallery-slideshow-title"></div>
+                                    <div class="small text-light-grey" id="bvu-gallery-slideshow-date"></div>
+                                </div>
+                                <button type="button" class="btn-close btn-close-white ms-3" aria-label="Close" id="bvu-gallery-close-slideshow"></button>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow-1 d-flex align-items-center justify-content-center p-3" style="z-index: 1;">
+                            <div class="w-100" style="max-width: 1100px;">
+                                <div class="rounded p-3 bvu-bg-opacity-90">
+                                    <div id="bvu-gallery-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" style="height: calc(100vh - 220px);">
+                                        <div class="carousel-inner h-100" id="bvu-gallery-carousel-inner"></div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#bvu-gallery-carousel" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#bvu-gallery-carousel" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">

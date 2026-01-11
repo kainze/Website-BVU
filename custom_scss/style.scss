@@ -88,3 +88,8 @@ box-shadow: -4px 7px 2px, -7px 16px 3px 1px,
 @keyframes rotate {
 to{transform:rotate(360deg)   }
 }
+
+// Bootstrap-compatible custom background opacity utilities
+// (Bootstrap ships only 10/25/50/75/100 by default.)
+.bvu-bg-opacity-85 { --bs-bg-opacity: .85; }
+.bvu-bg-opacity-90 { --bs-bg-opacity: .90; }
