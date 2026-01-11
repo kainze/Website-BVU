@@ -4,7 +4,7 @@ name: Deploy static content to Pages
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master", "feature/*"]
+    branches: ["master", "feature/**"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -59,6 +59,7 @@ jobs:
   deploy-prod:
     name: Deploy Prod 🚀
     needs: build-and-deploy-github-pages
+    if: github.ref == 'refs/heads/master'
     environment: "prod"
     runs-on: ubuntu-latest
     steps:
