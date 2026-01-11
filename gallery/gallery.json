@@ -1,18 +1,16 @@
 {
-  "generatedAt": "2026-01-11T00:00:00Z",
-  "basePath": "gallery",
+  "generatedAt": "2026-01-11T21:23:03.900Z",
   "years": [
     {
       "year": 2025,
       "events": [
         {
-          "id": "2025-08-22_ww-fest",
-          "title": "W&W Fest",
+          "id": "2025-w-w-fest-22-08-2025",
+          "title": "W&W Fest 22.08.2025",
           "date": "2025-08-22",
           "path": "gallery/2025/W&W Fest 22.08.2025",
           "thumbnail": "thumbnail.jpg",
           "images": [
-            "thumbnail.jpg",
             "SNY00170.jpg",
             "SNY00171.jpg",
             "SNY00172.jpg",
@@ -49,7 +47,6 @@
             "SNY00235.jpg",
             "SNY00236.jpg",
             "SNY00240.jpg",
-            "SNY00241.jpg",
             "SNY00244.jpg",
             "SNY00246.jpg",
             "SNY00249.jpg",
@@ -69,7 +66,8 @@
             "SNY00287.jpg",
             "SNY00288.jpg",
             "SNY00289.jpg",
-            "SNY00296.jpg"
+            "SNY00296.jpg",
+            "thumbnail.jpg"
           ]
         }
       ]
@@ -78,13 +76,12 @@
       "year": 2024,
       "events": [
         {
-          "id": "2024-12-24_bvu-sonnwend",
-          "title": "BVU Sonnwend",
+          "id": "2024-24-12-24-bvu-sonnwend",
+          "title": "24.12.24 BVU Sonnwend",
           "date": "2024-12-24",
           "path": "gallery/2024/24.12.24 BVU Sonnwend",
           "thumbnail": "thumbnail.jpg",
           "images": [
-            "thumbnail.jpg",
             "SNY00410.jpg",
             "SNY00411.jpg",
             "SNY00412.jpg",
@@ -105,12 +102,12 @@
             "SNY00430.jpg",
             "SNY00431.jpg",
             "SNY00437.jpg",
-            "SNY00440.jpg",
             "SNY00441.jpg",
             "SNY00445.jpg",
             "SNY00446.jpg",
             "SNY00447.jpg",
-            "SNY00448.jpg"
+            "SNY00448.jpg",
+            "thumbnail.jpg"
           ]
         }
       ]
