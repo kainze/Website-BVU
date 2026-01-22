@@ -5,6 +5,7 @@ let countDown_minutes = document.getElementById("minutes");
 let countDown_seconds = document.getElementById("seconds");
 let CountdownDescription = document.getElementById("CountdownDescription");
 let CountdownDates = [
+    { date: new Date("Jan 16, 2027 08:00:00").getTime(), description: "Faschingsburschenfest", enddate: new Date("Jan 16, 2027 23:30:00").getTime()},
     { date: new Date("Dec 25, 2025 17:30:00").getTime(), description: "Wintersonnwendfeuer", enddate: new Date("Dec 28, 2025 23:30:00").getTime()},
     { date: new Date("Aug 23, 2025 20:00:00").getTime(), description: "Burschenparty", enddate: new Date("Aug 23, 2025 23:30:00").getTime()},
     { date: new Date("Aug 22, 2025 19:30:00").getTime(), description: "Wein-und Weißbierfest", enddate: new Date("Aug 22, 2025 23:30:00").getTime()},
